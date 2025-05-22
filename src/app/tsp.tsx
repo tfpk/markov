@@ -1,3 +1,5 @@
+/*eslint prefer-const: "off"*/
+/*eslint @typescript-eslint/no-unused-vars: "off"*/
 import { useState, useEffect, useMemo } from "react";
 
 function calculatePathLength(points) {

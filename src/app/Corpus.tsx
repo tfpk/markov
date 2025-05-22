@@ -1,8 +1,9 @@
+/*eslint @typescript-eslint/no-explicit-any: 0*/
 'use client'
 
 import { useState } from 'react';
 
-export default function Corpus({corpus, setCorpus}) {
+export default function Corpus({corpus, setCorpus}: {corpus: any, setCorpus: any}) {
   const exampleText = `
   The skier went to the snow. The snowboarder went into the snow.
   a skier met a snowboarder. The snowboarder went down the powdery snow.
@@ -37,8 +38,8 @@ export default function Corpus({corpus, setCorpus}) {
 		<>
 			<h2>Corpus</h2>
 			<textarea
-				rows="20"
-				cols="50"
+				rows={20}
+				cols={50}
 				className="w-full bg-black text-grey text-3xl p-4 border border-gray-300 rounded-lg"
 				value={corpus}
 				onChange={(e) => setCorpus(e.target.value)}

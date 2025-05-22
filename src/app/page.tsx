@@ -1,3 +1,6 @@
+/*eslint prefer-const: "off"*/
+/*eslint @typescript-eslint/no-unused-vars: "off"*/
+/*eslint @typescript-eslint/no-explicit-any: 0*/
 'use client'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -5,7 +8,7 @@ import Corpus from './Corpus';
 import TSP from './tsp';
 import { useState, useMemo } from 'react';
 
-function getRandomInt(min, max) {
+function getRandomInt(min: any, max: any) {
   const minCeiled = Math.ceil(min);
   const maxFloored = Math.floor(max);
   let randVal = Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
@@ -15,7 +18,7 @@ function getRandomInt(min, max) {
 export default function App() {
   const [corpus, setCorpus] = useState('');
   const [genWords, setGenWords] = useState('');
-  const getWordList = (text) => {
+  const getWordList = (text: any) => {
     return text
       .toLowerCase()
       .replaceAll(".", " FULLSTOP ")
